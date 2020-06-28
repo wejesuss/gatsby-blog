@@ -6,5 +6,14 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "posts",
+        path: `${__dirname}/blog/`
+      }
+    },
+    `gatsby-transformer-remark`
+  ],
 }
